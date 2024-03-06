@@ -172,7 +172,8 @@ console.log(eyeColor);
 /*let crewMass = 0;
 
 while (crewMass < starWarsCharacters.length) {
-  crewMass = crewMass + starWarsCharacters[(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)].mass;
+  crewMass =
+    starWarsCharacters[(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)].mass + crewMass++;
 }
 console.log(crewMass);*/
 /* ESERCIZIO 7
@@ -215,7 +216,17 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+console.log(charactersNames.length);
+for (let i = 0; i < charactersNames.length; i++) {
+  for (let j = 0; j < femaleCharacters.length; j++) {
+    if (charactersNames[i] === femaleCharacters[j]) {
+      charactersNames.pop();
+    }
+  }
+}
+console.log(charactersNames.length);
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+const casualProprierty = Math.random();
